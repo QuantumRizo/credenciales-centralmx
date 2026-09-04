@@ -1,0 +1,146 @@
+.value-prop {
+  padding: 5.5rem 0;
+  overflow: hidden;
+  background-color: var(--bg-secondary);
+}
+
+.vp-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 3.5rem;
+  align-items: flex-start;
+}
+
+/* Left side */
+.vp-left {
+  position: sticky;
+  top: 120px;
+}
+
+.vp-title {
+  font-size: 4rem;
+  line-height: 0.95;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin-bottom: 1.5rem;
+  letter-spacing: -2px;
+}
+
+.vp-description {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.vp-cta-card {
+  background: white;
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-light);
+}
+
+.vp-cta-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.vp-cta-card p {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+  font-size: 0.98rem;
+  line-height: 1.5;
+}
+
+/* Right side */
+.vp-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.vp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.vp-modern-item {
+  background: white;
+  padding: 1.6rem 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  transition: all var(--transition-normal);
+  border: 1px solid var(--border-light);
+}
+
+.vp-modern-item:hover {
+  transform: translateX(8px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(39, 76, 119, 0.25);
+}
+
+.vp-modern-icon {
+  background: var(--bg-secondary);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: var(--transition-normal);
+}
+
+.vp-modern-item:hover .vp-modern-icon {
+  background: var(--primary);
+}
+
+.vp-modern-icon svg {
+  transition: var(--transition-normal);
+}
+
+.vp-modern-item:hover .vp-modern-icon svg {
+  stroke: white;
+}
+
+.vp-modern-content h3 {
+  font-size: 1.35rem;
+  margin-bottom: 0.4rem;
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.vp-modern-content p {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 768px) {
+  .vp-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .vp-left {
+    position: static;
+  }
+  .vp-title {
+    font-size: 3.2rem;
+  }
+  .vp-modern-item {
+    flex-direction: column;
+    gap: 1.2rem;
+    padding: 1.5rem;
+  }
+  .vp-modern-item:hover {
+    transform: translateY(-4px);
+  }
+}

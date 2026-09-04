@@ -1,0 +1,418 @@
+/* =========================================================
+   Success Stories — Editorial Scroll-Driven Presentation
+   Left: Case Study Images (Scrollable)
+   Right: Company Services & Info (Sticky)
+   Minimalist: No metrics, clean typography & imagery
+   ========================================================= */
+
+.success-cases {
+  background-color: var(--bg-color);
+  padding: 5rem 0 6.5rem;
+  transition: background-color 350ms ease;
+  position: relative;
+}
+
+/* Client Brand Colors Dynamic Palette */
+.success-cases.theme-simi {
+  --case-primary: #0B5EB7;
+  --case-accent: #C73B4A;
+  --case-bg-tint: #F3F7FC;
+  --case-border-tint: #D6E4F5;
+  --case-card-bg: #FFFFFF;
+}
+
+.success-cases.theme-sika {
+  --case-primary: #E30613;
+  --case-accent: #D48800;
+  --case-bg-tint: #FDF9F3;
+  --case-border-tint: #FCE6D6;
+  --case-card-bg: #FFFFFF;
+}
+
+.success-cases.theme-waldos {
+  --case-primary: #00A651;
+  --case-accent: #E31E24;
+  --case-bg-tint: #F4FAF5;
+  --case-border-tint: #DAEEDF;
+  --case-card-bg: #FFFFFF;
+}
+
+/* Section Header */
+.cases-header {
+  max-width: 740px;
+  margin: 0 auto 3.5rem auto;
+}
+
+.cases-eyebrow {
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--accent);
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.cases-title {
+  font-size: 3.2rem;
+  line-height: 1;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--text-main);
+  margin-bottom: 0.8rem;
+  letter-spacing: -1.2px;
+}
+
+.cases-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Two-Column Scroll-Driven Layout */
+.cases-story-layout {
+  display: grid;
+  grid-template-columns: 1fr 390px;
+  gap: 3.5rem;
+  align-items: flex-start;
+}
+
+/* =========================================================
+   LEFT COLUMN: SCROLLABLE CASE STUDY IMAGE CARDS
+   ========================================================= */
+
+.cases-story-scroll-left {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+
+.story-scene-item {
+  background: white;
+  border: 1.5px solid var(--case-border-tint, #E0EAEA);
+  border-radius: var(--radius-lg, 24px);
+  padding: 2.2rem;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.04);
+  transition: border-color 300ms ease, box-shadow 300ms ease, transform 300ms ease;
+  position: relative;
+}
+
+.story-scene-item.scene-active {
+  border-color: var(--case-primary);
+  box-shadow: 0 12px 32px rgba(6, 46, 103, 0.08);
+}
+
+.scene-header-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.4rem;
+  gap: 1rem;
+}
+
+.scene-num-badge {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--case-primary);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  background: var(--case-bg-tint);
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+}
+
+.scene-capability-tag {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  color: var(--case-accent);
+  text-transform: uppercase;
+}
+
+/* Visual Wrapper */
+.scene-visual-wrapper {
+  width: 100%;
+  margin-bottom: 1.6rem;
+}
+
+/* Sika America Single Image Card - Widescreen full-bleed */
+.scene-single-image-card.card-sika-america {
+  width: 100%;
+  height: 310px;
+  background: #FFFFFF;
+  border: 1px solid var(--case-border-tint, #FCE6D6);
+  border-radius: var(--radius-md, 18px);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+}
+
+.scene-hero-image-sika {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+  user-select: none;
+}
+
+/* Waldo's General Card */
+.scene-single-image-card.card-general {
+  width: 100%;
+  height: 310px;
+  background: #FFFFFF;
+  border: 1px solid var(--case-border-tint, #E0EAEA);
+  border-radius: var(--radius-md, 18px);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2.2rem;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+}
+
+.scene-hero-image-contained {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  user-select: none;
+}
+
+/* Case Title & Narrative Text (Minimalist, without KPI pill) */
+.scene-body-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.scene-title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: var(--case-primary);
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+}
+
+.scene-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* =========================================================
+   RIGHT COLUMN: STICKY SERVICES & COMPANY INFO
+   ========================================================= */
+
+.cases-sticky-right {
+  position: sticky;
+  top: max(100px, calc(50vh - 240px));
+  background: var(--case-bg-tint);
+  border: 1.5px solid var(--case-border-tint);
+  border-radius: var(--radius-lg, 24px);
+  padding: 2.2rem 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: opacity 180ms ease,
+              transform 180ms cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 350ms ease,
+              border-color 350ms ease;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
+  will-change: opacity, transform;
+}
+
+.cases-sticky-right.is-fading {
+  opacity: 0.15;
+  transform: translateY(-8px) scale(0.98);
+}
+
+.sticky-brand-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.1rem;
+  gap: 0.8rem;
+}
+
+.sticky-logo-card {
+  background: white;
+  border: 1px solid var(--case-border-tint);
+  padding: 0.4rem 0.95rem;
+  border-radius: var(--radius-md, 14px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  display: flex;
+  align-items: center;
+}
+
+.sticky-client-logo {
+  height: 36px;
+  max-width: 120px;
+  object-fit: contain;
+}
+
+.sticky-badge {
+  background: var(--case-primary);
+  color: white;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-pill);
+  transition: background-color 300ms ease;
+  white-space: nowrap;
+}
+
+.sticky-case-title {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--case-primary);
+  line-height: 1.25;
+  margin-bottom: 0.6rem;
+  letter-spacing: -0.3px;
+  transition: color 300ms ease;
+}
+
+.sticky-case-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+/* Services to Company List */
+.sticky-services-block {
+  margin-bottom: 1.8rem;
+}
+
+.services-lead-label {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--case-primary);
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+.sticky-services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.sticky-service-chip {
+  background: white;
+  border: 1px solid var(--case-border-tint);
+  border-radius: var(--radius-sm, 12px);
+  padding: 0.55rem 0.85rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-main);
+  line-height: 1.35;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.sticky-service-chip:hover {
+  transform: translateX(3px);
+  border-color: var(--case-primary);
+}
+
+.chip-bullet {
+  color: var(--case-primary);
+  font-size: 1rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* Sticky CTA */
+.sticky-cta-wrapper {
+  margin-top: 0.5rem;
+}
+
+.btn-sticky-cta {
+  width: 100%;
+  display: block;
+  text-align: center;
+  background: var(--case-primary);
+  color: white;
+  font-weight: 800;
+  font-size: 0.88rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-normal);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.btn-sticky-cta:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+}
+
+/* Mobile-Only Blocks (Hidden on Desktop) */
+.mobile-case-header,
+.mobile-case-services {
+  display: none;
+}
+
+/* =========================================================
+   Responsive Breakpoints
+   ========================================================= */
+
+@media (max-width: 992px) {
+  .cases-story-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .cases-sticky-right {
+    display: none;
+  }
+
+  .mobile-case-header {
+    display: block;
+    margin-bottom: 1.2rem;
+  }
+
+  .mobile-case-services {
+    display: block;
+    margin-top: 1.4rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid var(--case-border-tint);
+  }
+
+  .cases-title {
+    font-size: 2.5rem;
+  }
+
+  .story-scene-item {
+    padding: 1.6rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .cases-title {
+    font-size: 2.1rem;
+  }
+
+  .story-scene-item {
+    padding: 1.2rem;
+  }
+
+  .scene-single-image-card.card-sika-america,
+  .scene-single-image-card.card-general {
+    height: 240px;
+  }
+}

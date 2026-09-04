@@ -1,0 +1,146 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.4rem 0;
+  transition: all var(--transition-normal);
+  z-index: 1000;
+  background-color: transparent;
+}
+
+/* Scrolled navbar using the secondary accent color */
+.navbar.scrolled {
+  background-color: var(--accent);
+  background-image: none;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 0.95rem 0;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.16);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.navbar.scrolled::before {
+  display: none;
+}
+
+.navbar.view-centralsimi:not(.scrolled) {
+  background-color: rgba(255, 248, 244, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #F1DADA;
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 42px;
+  width: auto;
+  object-fit: contain;
+  transition: all var(--transition-normal);
+}
+
+/* White logo over dark hero AND over green scrolled navbar */
+.navbar.view-home:not(.scrolled) .logo-img,
+.navbar.scrolled .logo-img {
+  filter: brightness(0) invert(1);
+}
+
+.navbar.view-centralsimi:not(.scrolled) .logo-img {
+  filter: none;
+}
+
+.logo:hover .logo-img {
+  transform: scale(1.03);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-links li a {
+  font-weight: 600;
+  transition: var(--transition-normal);
+  font-size: 0.95rem;
+}
+
+/* Nav link colors over dark hero and over green scrolled navbar */
+.navbar.view-home:not(.scrolled) .nav-links li a:not(.nav-highlight-link),
+.navbar.scrolled .nav-links li a:not(.nav-highlight-link) {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar.view-home:not(.scrolled) .nav-links li a:not(.nav-highlight-link):hover,
+.navbar.scrolled .nav-links li a:not(.nav-highlight-link):hover {
+  color: #FFFFFF;
+}
+
+.navbar.view-centralsimi:not(.scrolled) .nav-links li a:not(.nav-highlight-link) {
+  color: var(--text-main);
+}
+
+.navbar.view-centralsimi:not(.scrolled) .nav-links li a:not(.nav-highlight-link):hover {
+  color: var(--primary);
+}
+
+/* CentralSimi highlight link */
+.nav-highlight-link {
+  font-weight: 700 !important;
+  padding: 0.4rem 1.1rem;
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-normal);
+}
+
+.navbar.view-home:not(.scrolled) .nav-highlight-link,
+.navbar.scrolled .nav-highlight-link {
+  background-color: rgba(255, 255, 255, 0.16);
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.navbar.scrolled .nav-highlight-link:hover,
+.navbar.view-home:not(.scrolled) .nav-highlight-link:hover {
+  background-color: rgba(255, 255, 255, 0.28) !important;
+  color: white !important;
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar.view-centralsimi:not(.scrolled) .nav-highlight-link,
+.navbar.view-centralsimi:not(.scrolled) .nav-highlight-link.active {
+  background-color: #0B5EB7 !important;
+  color: white !important;
+  box-shadow: var(--shadow-sm);
+}
+
+.navbar.scrolled .btn-accent {
+  background-color: #FFFFFF;
+  color: var(--primary, #0B5EB7);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.scrolled .btn-accent:hover {
+  background-color: #F4F7FA;
+  color: var(--primary-dark, #062E67);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+}

@@ -1,0 +1,148 @@
+/* Top Slim Loading Progress Bar */
+.top-progress-bar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: transparent;
+  z-index: 99999;
+  pointer-events: none;
+}
+
+.top-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #E85C41 0%, #FF8F70 100%);
+  box-shadow: 0 0 10px rgba(232, 92, 65, 0.8);
+  transition: width 300ms ease, opacity 300ms ease;
+}
+
+/* Floating Network Toasts Container */
+.network-toasts-container {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 99999;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  pointer-events: none;
+}
+
+.network-toast {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0.9rem 1.4rem;
+  border-radius: var(--radius-md);
+  background: #182232;
+  color: white;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  min-width: 310px;
+  max-width: 420px;
+  backdrop-filter: blur(12px);
+  will-change: transform, opacity;
+  animation: toastBounceIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Offline Toast */
+.toast-offline {
+  border-left: 4px solid #FF3D00;
+}
+
+/* Online Restored Toast */
+.toast-online {
+  border-left: 4px solid #00E676;
+}
+
+/* Slow Connection Toast */
+.toast-slow {
+  border-left: 4px solid #E85C41;
+}
+
+/* Badges */
+.toast-icon-badge {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.icon-red {
+  background: rgba(255, 61, 0, 0.15);
+  color: #FF3D00;
+}
+
+.icon-green {
+  background: rgba(0, 230, 118, 0.15);
+  color: #00E676;
+}
+
+.icon-orange {
+  background: rgba(232, 92, 65, 0.15);
+  color: #E85C41;
+}
+
+/* Toast Content */
+.toast-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.toast-title {
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.25;
+}
+
+.toast-desc {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.toast-close-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1.4rem;
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.toast-close-btn:hover {
+  color: white;
+}
+
+@keyframes toastBounceIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .network-toasts-container {
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+  }
+  .network-toast {
+    min-width: auto;
+    width: 100%;
+  }
+}
