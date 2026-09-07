@@ -140,4 +140,34 @@
 .team-group .portrait-image img { height:100%; width:100%; }
 .team-group .portrait-juan .portrait-image { position:relative; }
 .team-group .portrait-juan .portrait-image img { position:absolute; width:450%; height:auto; max-width:none; left:-263%; top:-190%; aspect-ratio:3 / 4; object-fit:contain; border:0; border-radius:0; transform:none; }
+
+/* Visual archive from the source deck: use photographs as part of the reading rhythm. */
+.solutions-layout { display:grid; gap:clamp(36px,6vw,92px); grid-template-columns:minmax(280px,.86fr) minmax(0,1.32fr); margin-top:8vh; }
+.solutions-showcase { display:flex; flex-direction:column; justify-content:space-between; min-height:570px; }
+.solutions-showcase h2 { font-size:clamp(51px,7.3vw,112px); line-height:.82; margin:0; }
+.solutions-showcase .solutions-deck-image { aspect-ratio:1.08/1; margin-top:42px; max-width:310px; width:74%; }
+.solutions-layout .solution-list { align-self:end; }
+.solutions-layout .solution-list article { min-height:245px; }
+.brand-gallery { display:grid; gap:14px; grid-template-columns:1.16fr .84fr; margin-top:52px; }
+.brand-gallery img { display:block; height:clamp(150px,20vw,280px); object-fit:cover; transition:transform .8s cubic-bezier(.16,1,.3,1), filter .5s; width:100%; }
+.brand-gallery img:nth-child(1) { grid-row:span 2; height:100%; min-height:clamp(314px,41vw,574px); }
+.brand-gallery img:nth-child(3) { object-position:center 45%; }
+.brand-gallery img:nth-child(4) { object-position:center 20%; }
+.brand-gallery img:hover { filter:saturate(1.07) contrast(1.03); transform:scale(.985); }
+.experience-scene.is-revealed .brand-gallery img { animation:revealUp .75s cubic-bezier(.16,1,.3,1) both; }
+.experience-scene.is-revealed .brand-gallery img:nth-child(2) { animation-delay:.08s; }
+.experience-scene.is-revealed .brand-gallery img:nth-child(3) { animation-delay:.16s; }
+.experience-scene.is-revealed .brand-gallery img:nth-child(4) { animation-delay:.24s; }
+
+@media (max-width:800px) {
+  .solutions-layout { display:block; margin-top:42px; }
+  .solutions-showcase { display:grid; gap:28px; grid-template-columns:minmax(0,1fr) 112px; min-height:0; }
+  .solutions-showcase h2 { font-size:clamp(48px,14vw,84px); }
+  .solutions-showcase .solutions-deck-image { align-self:end; aspect-ratio:1/1.32; margin:0; max-width:none; width:100%; }
+  .solutions-layout .solution-list { margin-top:42px; }
+  .solutions-layout .solution-list article { min-height:170px; }
+  .brand-gallery { gap:8px; margin-top:32px; }
+  .brand-gallery img { height:130px; }
+  .brand-gallery img:nth-child(1) { min-height:268px; }
+}
 @media (max-width:800px) { .hero-infinity { height:clamp(130px,43vw,190px); margin-bottom:14px; width:clamp(220px,72vw,340px); } }
