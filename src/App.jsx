@@ -7,7 +7,7 @@ import SceneTrace from './SceneTrace'
 
 const sections = [['intro', 'Inicio'], ['positioning', 'Posicionamiento'], ['team', 'Equipo'], ['solutions', 'Media Solutions'], ['experience', 'Brand Experience'], ['partners', 'Partners'], ['work', 'Casos'], ['centralsimi', 'CentralSimi'], ['why', '¿Por qué Central?'], ['contact', 'Gracias']]
 // Legacy asset filenames do not match their artwork; labels identify the actual brands.
-const partners = [['waldos-logo.png', "Waldo's"], ['sika.png', 'El Heraldo'], ['senosiain.png', 'Sika'], ['sansui.png', 'Sansui'], ['dongfeng.png', 'Senosiain'], ['waldos.png', 'd-uñas'], ['heraldo.png', 'Dongfeng'], ['dunas.svg', 'Farmacias Similares']]
+const partners = [['dunas.svg', 'Farmacias Similares'], ['senosiain.png', 'Sika'], ['sansui.png', 'Sansui'], ['dongfeng.png', 'Senosiain'], ['waldos-logo.png', "Waldo's"], ['heraldo.png', 'Dongfeng'], ['sika.png', 'El Heraldo'], ['waldos.png', 'd-uñas']]
 const teamGroups = [
   { label: 'CEO', people: [['team-patricia.jpg', 'Fanny García']] },
   { label: 'STRATEGY & DATA ANALYTICS', people: [['team-sebastian.jpg', 'Jose Miranda'], ['team-jorge.jpg', 'Félix Rizo'], ['team-maricela.jpg', 'Sebastián Morales'], ['team-eugenio.png', 'Jorge Rodríguez']] },
