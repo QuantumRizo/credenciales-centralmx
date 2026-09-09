@@ -54,7 +54,7 @@ function App() {
         gsap.fromTo(block, { '--rule-progress': 0 }, { '--rule-progress': 1, duration: 1.1, ease: 'power2.inOut', scrollTrigger: { trigger: block, start: 'top 87%', toggleActions: 'play none none reverse' } })
       })
       gsap.utils.toArray('.scene h2, .solution-list h3').forEach((title) => {
-        gsap.fromTo(title, { clipPath: 'inset(0 0 100% 0)' }, { clipPath: 'inset(0 0 0% 0)', duration: 1.1, ease: 'power3.out', scrollTrigger: { trigger: title, start: 'top 88%', toggleActions: 'play none none reverse' } })
+        gsap.fromTo(title, { clipPath: 'inset(-15% -5% 115% -5%)' }, { clipPath: 'inset(-15% -5% -15% -5%)', duration: 1.1, ease: 'power3.out', scrollTrigger: { trigger: title, start: 'top 88%', toggleActions: 'play none none reverse' } })
       })
       gsap.fromTo('.team-portraits figure', { y: 55, opacity: 0 }, { y: 0, opacity: 1, stagger: 0.07, duration: 0.65, ease: 'power3.out', scrollTrigger: { trigger: '#team', start: 'top 62%', once: true } })
     })
