@@ -105,9 +105,9 @@
 }
 
 /* Isotype-only hero: a cropped brand mark is revealed and erased as a continuous drawing. */
-.hero-infinity { height:clamp(145px,18vw,255px); margin:0 0 20px; overflow:hidden; width:clamp(250px,34vw,490px); }
+.hero-infinity { aspect-ratio:1781 / 1387; display:block; height:auto; margin:0 0 24px; overflow:hidden; width:clamp(200px,19vw,300px); }
 .hero-infinity img { display:block; height:auto; transform-origin:left center; width:100%; }
-.intro-scene.is-revealed .hero-infinity { animation:none; height:auto; aspect-ratio:1781 / 1030; }
+.intro-scene.is-revealed .hero-infinity { animation:none; }
 .infinity-stroke { stroke-dasharray:1 1; stroke-dashoffset:1; animation:centralTrace 8s linear infinite; }
 .infinity-stroke-two { animation-delay:.9s; }
 .infinity-stroke-three { animation-delay:1.8s; }
@@ -166,4 +166,4 @@
   .brand-gallery img { height:130px; }
   .brand-gallery img:nth-child(1) { min-height:268px; }
 }
-@media (max-width:800px) { .hero-infinity { height:clamp(130px,43vw,190px); margin-bottom:14px; width:clamp(220px,72vw,340px); } }
+@media (max-width:800px) { .hero-infinity { margin-bottom:18px; width:clamp(190px,55vw,260px); } }
