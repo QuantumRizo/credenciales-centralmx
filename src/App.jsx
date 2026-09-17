@@ -6,6 +6,7 @@ import InfinityMark from './InfinityMark'
 import SceneTrace from './SceneTrace'
 
 const sections = [['intro', 'Inicio'], ['positioning', 'Posicionamiento'], ['team', 'Equipo'], ['solutions', 'Media Solutions'], ['experience', 'Brand Experience'], ['partners', 'Partners'], ['work', 'Casos'], ['centralsimi', 'CentralSimi'], ['why', '¿Por qué Central?'], ['contact', 'Gracias']]
+const darkRailSections = new Set(['positioning', 'work', 'contact'])
 // Legacy asset filenames do not match their artwork; labels identify the actual brands.
 const partners = [['dunas.svg', 'Farmacias Similares'], ['senosiain.png', 'Sika'], ['sansui.png', 'Sansui'], ['dongfeng.png', 'Senosiain'], ['waldos-vertical.png', "Waldo's"], ['heraldo.png', 'Dongfeng'], ['sika.png', 'El Heraldo'], ['waldos.png', 'd-uñas']]
 const teamGroups = [
@@ -72,7 +73,7 @@ function App() {
       <a href="mailto:hola@centraldenegociosmx.com">hola@centraldenegociosmx.com</a>
       <button className="mobile-menu" onClick={() => setMenuOpen(!menuOpen)} aria-expanded={menuOpen}>Índice</button>
     </header>
-    <nav className={`section-rail ${menuOpen ? 'is-open' : ''}`} aria-label="Secciones">
+    <nav className={`section-rail ${menuOpen ? 'is-open' : ''} ${darkRailSections.has(active) ? 'on-dark' : ''}`} aria-label="Secciones">
       {sections.map(([id, label], index) => <button className={active === id ? 'active' : ''} onClick={() => goTo(id)} key={id}><span>{String(index + 1).padStart(2, '0')}</span>{label}</button>)}
     </nav>
     <main>

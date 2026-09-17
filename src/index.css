@@ -64,6 +64,8 @@
 .statement-wrap h2 { color:#b9cdeb; }
 .case span { color:#b9cdeb; }
 .section-rail button.active { color:#062e67; }
+.section-rail.on-dark button { color:rgba(216,228,247,.68); text-shadow:0 1px 10px rgba(4,16,43,.65); }
+.section-rail.on-dark button.active { color:#fff; }
 .simi-stat { background:#062e67; }
 .simi-stat strong { color:#fff; }
 .contact-scene { background:#062e67; color:#fff; }
@@ -95,6 +97,26 @@
 .team-group .team-portraits img { aspect-ratio:1; border:1px solid rgba(17,26,50,.22); border-radius:50%; object-position:center 20%; }
 .team-group .team-portraits figcaption { border:0; font-size:8px; line-height:1.25; padding:7px 1px 0; text-wrap:balance; }
 .team-group .team-portraits small, .team-names { display:none; }
+
+/* Keep the complete organization visible in a single desktop viewport. */
+@media (min-width:801px) {
+  .section-rail { left:clamp(42px,3vw,64px); }
+  .scene { padding-left:clamp(210px,13vw,270px); padding-right:clamp(42px,6vw,120px); }
+  .team-scene { min-height:100svh; padding-bottom:28px; padding-top:92px; }
+  .team-heading { margin-top:18px; }
+  .team-heading h2 { font-size:clamp(58px,5.4vw,90px); }
+  .team-heading p { font-size:clamp(16px,1.35vw,20px); max-width:560px; }
+  .team-facts { margin-top:28px; }
+  .team-facts div { padding:10px 18px; }
+  .team-facts strong { font-size:clamp(38px,4.5vw,58px); }
+  .team-facts span { font-size:9px; }
+  .team-groups { gap:20px clamp(28px,5vw,72px); margin-top:26px; }
+  .team-group { padding-top:9px; }
+  .team-group h3 { font-size:9px; }
+  .team-group .team-portraits { gap:10px 9px; margin-top:10px; }
+  .team-group .team-portraits figure { flex-basis:clamp(52px,4.9vw,70px); }
+  .team-group .team-portraits figcaption { font-size:7px; padding-top:5px; }
+}
 
 
 @media (max-width:800px) {
