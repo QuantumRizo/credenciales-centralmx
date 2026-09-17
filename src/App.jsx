@@ -87,17 +87,17 @@ function App() {
       <section id="experience" data-section className="scene experience-scene"><SceneTrace /><p className="section-number">04 — BRAND EXPERIENCE</p><h2>BRAND<br />EXPERIENCE.</h2><div className="solution-list"><article><span>01</span><h3>CREATIVE STRATEGY & PRODUCTION</h3><p>Creative & communication strategy · Design · Post production · Shootings · Audio Branding</p></article><article><span>02</span><h3>SOCIAL MEDIA</h3><p>Creative & design · Content creation · Community magement · Social listening</p></article><article><span>03</span><h3>PUBLIC RELATIONS</h3><p>Cevent magement & planning · Talent management · Media relations & profile development · Communication guidelines · High_impact activations · Influencer marketing</p></article><article><span>04</span><h3>SPONSORSHIPS & PARTNERSHIPS</h3><p>Coordination & mediation · Strategic consulting · Impact Analysis · Negotiation & Closing · Spomsorship management · Proposals & implementation · Special activation · Implementation</p></article></div><div className="brand-gallery"><figure><img src="/credenciales/brand-creative.png" alt="Creative Strategy & Production" /><figcaption>01 · Creative Strategy</figcaption></figure><figure><img src="/credenciales/brand-social.jpg" alt="Social Media" /><figcaption>02 · Social Media</figcaption></figure><figure><img src="/credenciales/brand-pr.png" alt="Public Relations" /><figcaption>03 · Public Relations</figcaption></figure><figure><img src="/credenciales/brand-partnerships.png" alt="Sponsorships & Partnerships" /><figcaption>04 · Partnerships</figcaption></figure></div></section>
       <section id="partners" data-section className="scene partners-scene"><SceneTrace /><p className="section-number">05 — OUR PARTNERS</p><div className="partners-title"><h2>OUR<br />PARTNERS.</h2></div><div className="partner-field">{partners.map(([file, name]) => <div className="partner-mark" data-logo={file} key={name}><img src={`/credenciales/${file}`} alt={name} /></div>)}</div></section>
       <section id="work" data-section className="scene work-scene"><SceneTrace /><p className="section-number">06 — CASOS DE ÉXITO</p><div className="work-title"><h2>CASOS DE<br />ÉXITO.</h2></div><div className="case-rail">
-        <article className="case">
+        <article className="case" tabIndex="0">
           <img src="/credenciales/monterrey-stage.jpg" alt="Activación Host City Supporter Monterrey" />
           <div className="case-default"><span>01 · CENTRAL SIMI</span><h3>HOST CITY<br />SUPPORTER<br />MONTERREY</h3><p>−80% costo de negociación</p></div>
           <div className="case-hover"><span>01 · CENTRAL SIMI</span><h3>HOST CITY SUPPORTER<br />MONTERREY</h3><ul><li>−80% reducción de costo en la negociación</li><li>2X assets obtenidos vs. acuerdo inicial</li><li>+160% cumplimiento del alcance original</li><li>2.1X valor comercial obtenido vs. inversión</li></ul></div>
         </article>
-        <article className="case">
+        <article className="case" tabIndex="0">
           <img src="/credenciales/sika-america-bienvenido.png" alt="Bienvenido: Club América y Sika" />
           <div className="case-default"><span>02 · SIKA</span><h3>PATROCINIO<br />CLUB AMÉRICA</h3><p>+12M de media value</p></div>
           <div className="case-hover"><span>02 · SIKA</span><h3>PATROCINIO<br />CLUB AMÉRICA</h3><ul><li>+$12M de Media Value en negociación</li><li>+11M de impactos orgánicos en patrocinio</li><li>+115% incremental de impactos en patrocinio</li></ul></div>
         </article>
-        <article className="case">
+        <article className="case" tabIndex="0">
           <img src="/credenciales/waldos-campaign.png" alt="Campaña Waldo's" />
           <div className="case-default"><span>03 · WALDO'S</span><h3>ALWAYS ON<br />&amp; RETAIL</h3><p>+5% brand purchase</p></div>
           <div className="case-hover"><span>03 · WALDO'S</span><h3>ALWAYS ON<br />&amp; RETAIL</h3><ul><li>+5 campañas anuales gestionadas</li><li>+5% de Brand Purchase</li><li>+50% de visibilidad procedente de media</li></ul></div>

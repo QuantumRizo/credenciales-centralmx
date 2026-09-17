@@ -66,6 +66,22 @@
 .section-rail button.active { color:#062e67; }
 .section-rail.on-dark button { color:rgba(216,228,247,.68); text-shadow:0 1px 10px rgba(4,16,43,.65); }
 .section-rail.on-dark button.active { color:#fff; }
+
+/* Case studies: reveal the source-deck results without losing the campaign image. */
+.case { outline:none; }
+.case-hover { backdrop-filter:blur(3px); background:linear-gradient(180deg,rgba(6,14,38,.58) 0%,rgba(6,14,38,.93) 74%); display:flex; flex-direction:column; justify-content:flex-end; padding:28px 26px; }
+.case:is(:hover,:focus-within)::after { background:linear-gradient(0deg,rgba(5,13,34,.7),rgba(5,13,34,.18) 75%); }
+.case:is(:hover,:focus-within) .case-default { opacity:0; transform:translateY(8px); pointer-events:none; }
+.case:is(:hover,:focus-within) .case-hover { opacity:1; transform:translateY(0); }
+.case:focus-visible { outline:2px solid #b9cdeb; outline-offset:5px; }
+.case-hover h3 { font-size:clamp(20px,2vw,31px); margin:10px 0 16px; }
+.case-hover ul { border-bottom:1px solid rgba(185,205,235,.26); }
+.case-hover li { align-items:start; display:grid; gap:8px; grid-template-columns:12px 1fr; padding:10px 0; }
+.case-hover li::before { color:#b9cdeb; content:'•'; font-size:13px; line-height:1.25; }
+
+@media (hover:none) {
+  .case-hover { display:none; }
+}
 .simi-stat { background:#062e67; }
 .simi-stat strong { color:#fff; }
 .contact-scene { background:#062e67; color:#fff; }
