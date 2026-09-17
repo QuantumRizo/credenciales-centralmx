@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 :root { background:#e8edf6; color:#111a32; font-family:Manrope,Arial,sans-serif; font-synthesis:none; }
 * { box-sizing:border-box; } html { scroll-behavior:smooth; } body { margin:0; overflow-x:hidden; } button,a { font:inherit; } button { cursor:pointer; }
@@ -214,3 +214,16 @@
   .brand-gallery figcaption { font-size:8px; margin-top:7px; padding-top:4px; }
 }
 @media (max-width:800px) { .hero-infinity { margin-bottom:18px; width:clamp(190px,55vw,260px); } }
+
+/* Keep every descriptive paragraph aligned with the clean sans-serif reference. */
+.statement-intro,
+.team-heading > p,
+.partners-title > p,
+.work-title > p,
+.solution-list p,
+.case p,
+.case-hover li,
+.simi-copy > p:last-child,
+.why-grid p {
+  font-family: Manrope, Arial, sans-serif;
+}
